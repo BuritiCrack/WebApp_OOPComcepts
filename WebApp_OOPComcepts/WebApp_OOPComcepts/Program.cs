@@ -29,6 +29,7 @@ namespace WebApp_OOPComcepts
 
                 var dataObject = new Date( year, month, day);
                 Console.WriteLine("The date entered is: " + dataObject);
+                Console.WriteLine("");
 
                 Employee salaryEmployee = new SalaryEmployee()
                 {
@@ -42,8 +43,36 @@ namespace WebApp_OOPComcepts
                 };
 
                 Console.WriteLine(salaryEmployee);
+                Console.WriteLine("");
 
+                Employee commissionEmployee = new CommissionEmployee()
+                {
+                    Id = 1,
+                    FirstName = "Armando",
+                    LastName = "Casas",
+                    BirthDate = dataObject,
+                    HiringDate = dataObject,
+                    IsActive = false,
+                    CommissionPercentaje = 5,
+                    Sales = 10000
+                };
 
+                Console.WriteLine(commissionEmployee);
+                Console.WriteLine("");
+
+                Employee hourlyEmployee = new HourlyEmployee()
+                {
+                    Id = 1,
+                    FirstName = "Armando",
+                    LastName = "Casas",
+                    BirthDate = dataObject,
+                    HiringDate = dataObject,
+                    IsActive = false,
+                    Hours = 5,
+                    HoursValue = 6500
+                };
+
+                Console.WriteLine(hourlyEmployee);
             }
             catch (Exception message) 
             {
