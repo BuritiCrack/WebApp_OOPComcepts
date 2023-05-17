@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Common;
 
 namespace WebApp_OOPComcepts
 {
@@ -28,6 +29,21 @@ namespace WebApp_OOPComcepts
 
                 var dataObject = new Date( year, month, day);
                 Console.WriteLine("The date entered is: " + dataObject);
+
+                Employee salaryEmployee = new SalaryEmployee()
+                {
+                    Id = 1,
+                    FirstName = "Armando",
+                    LastName = "Casas",
+                    BirthDate = dataObject,
+                    HiringDate = dataObject,
+                    IsActive = true,
+                    Salary = 1600000
+                };
+
+                Console.WriteLine(salaryEmployee);
+
+
             }
             catch (Exception message) 
             {
