@@ -38,7 +38,7 @@ namespace WebApp_OOPComcepts
                     BirthDate = dataObject,
                     HiringDate = dataObject,
                     IsActive = true,
-                    Salary = 1600000
+                    Salary = 160000
                 };
 
                 Console.WriteLine(salaryEmployee);
