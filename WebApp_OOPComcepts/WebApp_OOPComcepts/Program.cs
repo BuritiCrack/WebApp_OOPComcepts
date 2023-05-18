@@ -89,6 +89,16 @@ namespace WebApp_OOPComcepts
                     Base = 160000
                 };
                 Console.WriteLine(baseCommissionEmployee);
+                Console.WriteLine("");
+
+                Invoice invoice = new Invoice()
+                {
+                    Id = 200,
+                    Description = "Cilantro",
+                    Price = 10,
+                    Quantity = 3
+                };
+                Console.WriteLine(invoice);
 
             }
             catch (Exception message) 
