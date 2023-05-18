@@ -8,7 +8,7 @@ namespace WebApp_OOPComcepts
     {
         #region Propieties
 
-        public double Hours { get; set; }
+        public float Hours { get; set; }
         public decimal HoursValue { get; set; }
 
         #endregion
