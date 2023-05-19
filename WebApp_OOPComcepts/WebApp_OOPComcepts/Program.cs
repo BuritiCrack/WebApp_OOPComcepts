@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Common;
+using WebApp_OOPComcepts.Helpers;
 
 namespace WebApp_OOPComcepts
 {
@@ -42,13 +44,13 @@ namespace WebApp_OOPComcepts
                     Salary = 160000
                 };
 
-                Console.WriteLine(salaryEmployee);
+                //Console.WriteLine(salaryEmployee);
                 Console.WriteLine("");
 
                 Employee commissionEmployee = new CommissionEmployee()
                 {
                     Id = 1,
-                    FirstName = "Armando",
+                    FirstName = "Joaquin",
                     LastName = "Casas",
                     BirthDate = dataObject,
                     HiringDate = dataObject,
@@ -57,39 +59,45 @@ namespace WebApp_OOPComcepts
                     Sales = 10000
                 };
 
-                Console.WriteLine(commissionEmployee);
+                //Console.WriteLine(commissionEmployee);
                 Console.WriteLine("");
 
                 Employee hourlyEmployee = new HourlyEmployee()
                 {
                     Id = 1,
-                    FirstName = "Armando",
+                    FirstName = "Ramiro",
                     LastName = "Casas",
                     BirthDate = dataObject,
                     HiringDate = dataObject,
-                    IsActive = false,
-                    Hours = 5,
+                    IsActive = true,
+                    Hours = 100,
                     HoursValue = 6500
                 };
 
-                Console.WriteLine(hourlyEmployee);
+                //Console.WriteLine(hourlyEmployee);
                 Console.WriteLine("");
 
                 CommissionEmployee baseCommissionEmployee = new BaseCommissionEmployee()
                 {
 
                     Id = 1,
-                    FirstName = "Armando",
+                    FirstName = "Alvaro",
                     LastName = "Base",
                     BirthDate = dataObject,
                     HiringDate = dataObject,
-                    IsActive = false,
+                    IsActive = true,
                     CommissionPercentaje = 5,
                     Sales = 100000,
                     Base = 160000
                 };
-                Console.WriteLine(baseCommissionEmployee);
+              //  Console.WriteLine(baseCommissionEmployee);
                 Console.WriteLine("");
+
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee, hourlyEmployee,
+                                                                   commissionEmployee, baseCommissionEmployee);
+                
+                Console.WriteLine($"Total Payroll......{employeeHelper.GetPayrollFromActiveEmpoyees():C2}");
+                Console.WriteLine(" ");
 
                 Invoice invoice = new Invoice()
                 {
@@ -98,6 +106,7 @@ namespace WebApp_OOPComcepts
                     Price = 10,
                     Quantity = 3
                 };
+
                 Console.WriteLine(invoice);
 
             }
